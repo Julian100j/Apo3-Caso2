@@ -19,7 +19,7 @@ import java.util.Scanner;
 
     public Taller2() {
         
-        //Se crea un 
+        //Se crea un ArrayList y un escaner
         misProductos = new ArrayList<>();
         lector = new Scanner(System.in);
     }
@@ -47,20 +47,20 @@ import java.util.Scanner;
             
              switch (opcion) {
                 case 1:
-              // Pide al usuario que ingrese los datos de un nuevo producto y lo agrega al ArrayList misProductos.
+              // Se llama al metodo agregarProducto()
                     agregarProducto();
                     break;
                 case 2:
-              //Muestra los datos de todos los productos del ArrayList misProductos.
+              // Se llama al metodo mostrarInventario()
                     mostrarInventario();
                     break;
                 case 3:
-              //Ordena el ArrayList misProductos de forma ascendente según la cantidad de cada producto.
+             // Se llama al metodo ordenAscendente()
                     ordenAscendente();
                     break;
                     
                 case 4:
-              //Pide al usuario que ingrese el id de un producto y lo elimina del ArrayList misProductos.
+             // Se llama al metodo eliminarProducto()
                     eliminarProducto();
                 break;
                 
@@ -80,7 +80,8 @@ import java.util.Scanner;
               //Los metodos:
      
              public void agregarProducto() {
-                 
+            // Pide al usuario que ingrese los datos de un nuevo producto y lo agrega al ArrayList misProductos.
+            
                 System.out.println("Ingrese el id del producto:");
                 int id_Producto=lector.nextInt();
                 
@@ -104,6 +105,8 @@ import java.util.Scanner;
              }
                 
              public void mostrarInventario() {
+                //Muestra los datos de todos los productos del ArrayList misProductos.
+                
                 System.out.println("====== Mostrar Inventario =====");
                 for (Producto t: misProductos){
                 System.out.println("Id: " +t.getId_Producto());
@@ -116,20 +119,18 @@ import java.util.Scanner;
              }
             
             public void ordenAscendente() {
-                
+                //Ordena el ArrayList misProductos de forma ascendente según la cantidad de cada producto. (Menor a mayor)
                 
                int n = misProductos.size();
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n - i - 1; j++) {
-            if (misProductos.get(j).getCantidad()> misProductos.get(j + 1).getCantidad()) {
-                Producto temp = misProductos.get(j);
-                misProductos.set(j, misProductos.get(j + 1));
-                misProductos.set(j + 1, temp);
+               for (int i = 0; i < n; i++) {
+                 for (int j = 0; j < n - i - 1; j++) {
+                    if (misProductos.get(j).getCantidad()> misProductos.get(j + 1).getCantidad()) {
+                        Producto temp = misProductos.get(j);
+                        misProductos.set(j, misProductos.get(j + 1));
+                        misProductos.set(j + 1, temp);
             }
         }
     }
-
-                    
                 System.out.println("=====Productos ordenados (Menor a Mayor)=====");               
                
                 for (Producto k: misProductos){
@@ -139,11 +140,10 @@ import java.util.Scanner;
                 System.out.println("Cantidad: " +k.getCantidad());
                 System.out.println("===============================");
                 }
-}
-            
-                            
+}         
              public void eliminarProducto() {
-                
+               //Pide al usuario que ingrese el id de un producto y lo elimina del ArrayList misProductos.
+               
                 System.out.println("===============================");
                 
                 System.out.println("Ingresa el id del producto a eliminar");
@@ -155,10 +155,8 @@ import java.util.Scanner;
                             System.out.println("===============================");
                             
                             System.out.println("El producto con id "+id+" ha sido eliminado correctamente");
-                          
                         }
-                    }
-                    
+                    }             
 }
         public static void main(String[] args) {
        //En el método main, se crea un objeto Taller2 y se llama al método mostrarMenu() para mostrar el menú de opciones al usuario.

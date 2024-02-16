@@ -16,7 +16,7 @@ public class Producto {
     private double precio;
     private int cantidad;
     
-    //Métodos
+    //Constructores y Metodos
     public Producto() {
     }
 
@@ -26,7 +26,8 @@ public class Producto {
         this.precio = precio;
         this.cantidad = cantidad;
     }
-
+    //Getters
+    
     public int getId_Producto() {
         return id_Producto;
     }
@@ -42,7 +43,8 @@ public class Producto {
     public int getCantidad() {
         return cantidad;
     }
-
+    //Setters
+    
     public void setId_Producto(int id_Producto) {
         this.id_Producto = id_Producto;
     }
