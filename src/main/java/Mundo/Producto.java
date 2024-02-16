@@ -13,14 +13,14 @@ public class Producto {
     //Atributos
     private int id_Producto;
     private String nombre;
-    private int precio;
+    private double precio;
     private int cantidad;
     
     //Métodos
     public Producto() {
     }
 
-    public Producto(int id_Producto, String nombre, int precio, int cantidad) {
+    public Producto(int id_Producto, String nombre, double precio, int cantidad) {
         this.id_Producto = id_Producto;
         this.nombre = nombre;
         this.precio = precio;
@@ -51,7 +51,7 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public void setPrecio(int precio) {
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
 
