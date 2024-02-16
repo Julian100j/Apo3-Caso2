@@ -1,4 +1,5 @@
 # Developed by Julian Ceballos and Juan Zambrano
+![Logo Java](https://hireline.io/blog/wp-content/uploads/2019/11/Razones-para-aprender-a-programar-con-Java-1200x900.jpg)
 
 ## Project Description
 This project is a inventory manager develop in Java with NetBeans. It allows users to add new product, display all existing products, organize them and delete a product.
